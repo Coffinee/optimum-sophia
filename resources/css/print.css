@@ -1,0 +1,79 @@
+@page {
+    margin: 2cm;
+  }
+  @media print {
+    @page {
+        size: 86mm 54mm;
+        margin: 0;
+    }
+}
+.receipt-holder {
+  margin: 0 !important;
+  padding: 25px !important;
+  border: 1px solid #7F7F7FB2;
+  color: #000;
+  background-color: #fff;
+  font-family:verdana, arial, sans-serif !important;
+}
+
+.receipt-holder .row .col-md-7{
+    width: 60%;
+}
+.receipt-holder .row .col-md-5{
+    width: 40%;
+}
+
+.receipt-holder .logo{
+    width: 350px;
+    height: 100px;
+}
+.receipt-holder .consignee{
+  border-bottom: 2px solid;
+  margin-bottom: 5px;
+}
+.receipt-holder p{
+  font-size: 13px;
+  color: #3E3E3E;
+}
+.receipt-holder .text-semi-bold{
+  font-size: 15px;
+  color: #000;
+  font-weight: 400;
+}
+.receipt-holder p b{
+  color: #3E3E3E;
+  font-weight: 400;
+}
+.receipt-holder .text-15{
+  font-size: 15px ;
+}
+.receipt-holder .terms p{
+  font-style: italic;
+}
+.receipt-holder .powered{
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+.receipt-holder .allcash-logo{
+  width: 200px;
+  margin-top: -10px;
+}
+  @page {
+    margin: 2cm;
+  }
+  
+  /* target the first page only */
+  @page :first {
+    margin-top: 6cm;
+  }
+  
+  /* target left (even-numbered) pages only */
+  @page :left {
+    margin-right: 4cm;
+  }
+  
+  /* target right (odd-numbered) pages only */
+  @page :right {
+    margin-left: 4cm;
+  }
