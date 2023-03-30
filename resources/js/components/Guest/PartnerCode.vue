@@ -1,12 +1,12 @@
 <template>
     <div class="container-fluid h-100 login-page">
         <div class="row h-100 align-items-center bg-white">
-            <div class="col-md-6 px-md-4 px-sm-2 z-99">
+            <div class="col-md-6 px-md-4 px-sm-2 z-99 partner-code-form">
                 <router-link to="/">
-                    <img class="img-fluid sophia-login-logo" src="/images/sophia-login-logo.png" alt="AllCash Logo" />
+                    <img class="img-fluid sophia-partner-code-logo" src="/images/sophia-partner-code-logo.png" alt="Sophia Partner Code Logo" />
                 </router-link>
                 <form action="javascript:void(0)" method="post">
-                    <div class="col-12" v-if="Object.keys(validationErrors).length > 0">
+                    <!-- <div class="col-12" v-if="Object.keys(validationErrors).length > 0">
                         <div class="alert alert-danger">
                             <ul class="mb-0">
                                 <li v-for="(value, key) in validationErrors" :key="key">
@@ -14,39 +14,15 @@
                                 </li>
                             </ul>
                         </div>
+                    </div> -->
+                    <GroupButtonLeft v-model="auth.code" type="text" label="PARTNER CODE" icon="bi bi-lock" name="code" placeholder="ENTER PARTNERED CODE"></GroupButtonLeft>
+                    <div class="btn-proceed-partner-code">
+                        <button :disabled="processing" @click="proceed" class="btn btn-lg btn-login btn-proceed draw-border" type="button">
+                            {{ processing ? "Please wait" : "PROCEED" }}
+                        </button>
                     </div>
-                    <GroupButtonLeft v-model="auth.email" type="text" label="USERNAME" icon="bi bi-person" name="email"
-                        autocomplete="email" placeholder="ENTER YOUR USERNAME"></GroupButtonLeft>
-                    <GroupButtonPassword v-model="auth.password" type="password" label="PASSWORD" icon="bi bi-lock"
-                        name="password" autocomplete="email" placeholder="ENTER YOUR PASSWORD"></GroupButtonPassword>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                                <label class="form-check-label text-blue" for="exampleCheck1">Remember Me</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 text-end">
-                            <div class="mb-3">
-                                <router-link class="text-blue" to="/">Forgot Password?</router-link>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="py-4">
-                        <div class="captcha-bg input-group mb-3">
-                            <input type="text" class="form-control w-50 rounded-0 shadow-none"
-                                placeholder="ENTER CODE HERE" />
-                            <span class="input-group-text w-50 rounded-0 captcha"
-                                style="background: #A0A0A0 !important; padding: 8.6px; margin: auto; width: 50%;">
-                                {{ generated_code }}
-                            </span>
-                        </div>
-                    </div>
-                    <button :disabled="processing" @click="login" class="btn btn-lg btn-login draw-border" type="button">
-                        {{ processing ? "Please wait" : "LOGIN" }}
-                    </button>
                 </form>
-                <div class="text-center">
+                <div class="text-center allcash-container">
                     <h1 class="powered-by">Powered by</h1>
                     <div class="all-cash">
                         <img class="allcash-logo" src="/images/allcash.png" alt="" />
@@ -183,12 +159,13 @@ const particlesLoaded = async (container) => {
 <script>
 import { mapActions } from "vuex";
 import GroupButtonLeft from "@/components/Misc/Inputs/GroupButtonLeft.vue";
-import GroupButtonPassword from "@/components/Misc/Inputs/GroupButtonPassword.vue";
+// import GroupButtonPassword from "@/components/Misc/Inputs/GroupButtonPassword.vue";
+// import ButtonOrange from "@/components/Misc/Buttons/ButtonOrange.vue";
 
 export default {
     name: "login",
     components: {
-        GroupButtonLeft, GroupButtonPassword,
+        GroupButtonLeft
     },
     data() {
         return {

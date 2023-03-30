@@ -8,6 +8,8 @@ const Login = () => import("@/components/Guest/Login.vue");
 const Register = () => import("@/components/Guest/Register.vue");
 const NotFound = () => import("@/components/Guest/NotFound.vue");
 const ResetPassword = () => import("@/components/Guest/ResetPassword.vue");
+const ForgotPassword = () => import("@/components/Guest/ForgotPassword.vue");
+const PartnerCode = () => import("@/components/Guest/PartnerCode.vue");
 /* Guest Component */
 
 /* Layouts */
@@ -85,6 +87,22 @@ const routes = [
                 component: NotFound,
                 meta: {
                     title: `NotFound`,
+                },
+            },
+            {
+                name: "ForgotPassword",
+                path: "/forgot-password",
+                component: ForgotPassword,
+                meta: {
+                    title: `Forgot Password`,
+                },
+            },
+            {
+                name: "PartnerCode",
+                path: "/partner-code",
+                component: PartnerCode,
+                meta: {
+                    title: `Partner Code`,
                 },
             },
             {

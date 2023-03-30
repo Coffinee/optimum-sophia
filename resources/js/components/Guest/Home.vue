@@ -7,7 +7,6 @@
                 <h2>ARMS</h2>
                 <p class="subtitle">ALLCASH REMITTANCE MONEY SYSTEM</p>
             </div>
-           />
           <div class="row text-center home-links">
             <div class="col">
               <div class="py-2">

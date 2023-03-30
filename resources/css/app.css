@@ -186,17 +186,19 @@ input::placeholder{
 }
 .login-page .show-pass{
     width: 65px;
-    background-color:#f26400;
-    
+    background-color:#F9951E;
 }
-.login-page .allcash-logo{
+.login-page .sophia-login-logo{
   width: auto;
-  height: 70px;
+  height: 115px;
   display: block;
   margin: 0 auto;
 }
 .login-page form{
     padding: 40px 100px;
+}
+.form-label{
+  color: #3E3E3E;
 }
 .login-page .show-pass:hover, .login-page .show-pass:focus{
     background-color: #f26400;
@@ -209,10 +211,14 @@ input::placeholder{
     width: 70%;
     display: block;
     margin: 0 auto;
-    background: linear-gradient(90deg, rgba(251,155,50,1) 0%, rgba(251,155,50,1) 58%, rgba(238,62,44,1) 100%);
+    background: #F9951E;
     color: #fff;
     border: none;
     border-radius: unset;
+}
+
+.all-cash .allcash-logo{
+  height: 50px;
 }
 
 .draw-border {
@@ -258,6 +264,59 @@ input::placeholder{
     .login-page form{
         padding: 20px 30px;
     }
+}
+
+/* FORGOT PASSWORD */
+.sophia-forgot-password-logo{
+  width: auto;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.fp-note{
+  font-size: 14px;
+  margin: 40px 0 0 20px;
+}
+
+.return-login-btn{
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+  color: #4472C4;
+}
+
+.btn-proceed-container{
+  margin-top: 40px;
+}
+.allcash-container{
+  margin-top: 45px;
+}
+
+/* PARTNER CODE CSS*/
+.partner-code-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  height: 100%;
+}
+
+.sophia-partner-code-logo{
+  width: auto;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-proceed-partner-code{
+  margin: 80px auto;
+
+}
+
+/* RESET PASSWORD  */
+.otp-inputs input{
+  height: 50px;
 }
 
 
@@ -1206,10 +1265,11 @@ height: 100px;
 .receipt-holder .terms p{
   font-style: italic;
 }
-.receipt-holder .powered{
+.receipt-holder .powered, .powered-by{
   margin-bottom: 0;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
+  color: black;
 }
 .receipt-holder .allcash-logo{
   width: 200px;

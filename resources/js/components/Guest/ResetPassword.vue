@@ -3,12 +3,10 @@
         <div class="row h-100 align-items-center bg-white">
             <div class="col-md-6 px-md-4 px-sm-2 z-99">
                 <router-link to="/">
-
-                    <img class="img-fluid allcash-logo" src="/images/allcash-logo.png" alt="AllCash Logo" />
+                    <img class="img-fluid sophia-login-logo" src="/images/sophia-reset-password-logo.png" alt="AllCash Logo" />
                 </router-link>
-                <p>Reset Password</p>
                 <form action="javascript:void(0)" method="post">
-                    <div class="col-12" v-if="Object.keys(validationErrors).length > 0">
+                    <!-- <div class="col-12" v-if="Object.keys(validationErrors).length > 0">
                         <div class="alert alert-danger">
                             <ul class="mb-0">
                                 <li v-for="(value, key) in validationErrors" :key="key">
@@ -16,38 +14,41 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <GroupButtonLeft v-model="auth.email" type="text" label="USERNAME" icon="bi bi-person" name="email"
-                        autocomplete="email" placeholder="ENTER YOUR USERNAME"></GroupButtonLeft>
-                    <GroupButtonPassword v-model="auth.password" type="password" label="PASSWORD" icon="bi bi-lock"
-                        name="password" autocomplete="email" placeholder="ENTER YOUR PASSWORD"></GroupButtonPassword>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                                <label class="form-check-label text-blue" for="exampleCheck1">Remember Me</label>
+                    </div> -->
+                    <div class="container height-100 d-flex justify-content-center align-items-center">
+                        <div class="position-relative">
+                            <div class="p-2 text-center">
+                                <h6 class="">Enter below the Reference Code that we sent to your email.</h6>
+                                <div class="otp-inputs d-flex flex-row justify-content-center mt-2">
+                                    <input class="m-2 text-center form-control rounded-0" type="text" maxlength="1" /> 
+                                    <input class="m-2 text-center form-control rounded-0" type="text" maxlength="1" /> 
+                                    <input class="m-2 text-center form-control rounded-0" type="text" maxlength="1" /> 
+                                    <input class="m-2 text-center form-control rounded-0" type="text" maxlength="1" />
+                                    <input class="m-2 text-center form-control rounded-0" type="text" maxlength="1" /> 
+                                    <input class="m-2 text-center form-control rounded-0" type="text" maxlength="1" /> 
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 text-end">
-                            <div class="mb-3">
-                                <router-link class="text-blue" to="/">Forgot Password?</router-link>
-                            </div>
-                        </div>
                     </div>
-                    <div class="py-4">
-                        <div class="captcha-bg input-group mb-3">
-                            <input type="text" class="form-control w-50 rounded-0 shadow-none"
-                                placeholder="ENTER CODE HERE" />
-                            <span class="input-group-text w-50 rounded-0 captcha"
-                                style="background: #A0A0A0 !important; padding: 8.6px; margin: auto; width: 50%;">
-                                {{ generated_code }}
-                            </span>
-                        </div>
-                    </div>
-                    <button :disabled="processing" @click="login" class="btn btn-lg btn-login draw-border" type="">
+                    <GroupButtonRight v-model="auth.password" type="password" label="NEW PASSWORD" icon="bi bi-eye"
+                        name="password" autocomplete="password" placeholder="ENTER YOUR NEW PASSWORD"></GroupButtonRight>
+                    <GroupButtonRight v-model="auth.password" type="password" label="CONFIRM PASSWORD" icon="bi bi-eye"
+                        name="password" autocomplete="empasswordail" placeholder="RE-ENTER YOUR NEW PASSWORD"></GroupButtonRight>
+
+                    <!-- PASSWORD CRITERIA 
+                        <div class="row">
+
+                    </div>  -->
+                    <button :disabled="processing" @click="login" class="btn btn-lg btn-login draw-border" type="button">
                         {{ processing ? "Please wait" : "LOGIN" }}
                     </button>
                 </form>
+                <div class="text-center">
+                    <h1 class="powered-by">Powered by</h1>
+                    <div class="all-cash">
+                        <img class="allcash-logo" src="/images/allcash.png" alt="" />
+                    </div>
+                </div>
             </div>
             <div class="col-md-6 r-side h-100">
                 <Particles id="tsparticles" :particlesInit="particlesInit" :particlesLoaded="particlesLoaded" :options="{
@@ -179,12 +180,13 @@ const particlesLoaded = async (container) => {
 <script>
 import { mapActions } from "vuex";
 import GroupButtonLeft from "@/components/Misc/Inputs/GroupButtonLeft.vue";
+import GroupButtonRight from "@/components/Misc/Inputs/GroupButtonRight.vue";
 import GroupButtonPassword from "@/components/Misc/Inputs/GroupButtonPassword.vue";
 
 export default {
-    name: "resetpassword",
+    name: "login",
     components: {
-        GroupButtonLeft,
+        GroupButtonLeft, GroupButtonRight, GroupButtonPassword, 
     },
     data() {
         return {
@@ -211,7 +213,7 @@ export default {
             return this.generated_code = word;
         },
         async login() {
-            this.processing = true;
+            this.processing = true;            
             await axios.get("/sanctum/csrf-cookie");
             await axios
                 .post("/login", this.auth)
