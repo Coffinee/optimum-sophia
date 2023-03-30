@@ -7,7 +7,7 @@ body{
     color: rgba(62, 62, 62, 0.75);
     letter-spacing: 1px;
     font-size: clamp(0.75rem, 0.5156rem + 0.75vw, 0.9375rem);
-   
+
 }
 :root {
   --hex-parent-width: 50px;
@@ -62,15 +62,20 @@ input::placeholder{
     z-index: 999;
     position: relative;
 }
+
+.captcha-bg{
+    display: flex;
+}
 .captcha{
-    background-color: #A0A0A0;
+
     font-family: 'Dokdo', cursive;
     text-align: center;
     font-size: 14px;
     letter-spacing: 0.6rem;
     display: block;
-    color: #fff;
-    border: 1px solid #A0A0A0;
+    color: #F9951E;
+    width: 100vw;
+
 }
 /* HOMEPAGE */
 .wrap-banner{
@@ -80,7 +85,7 @@ input::placeholder{
   width: 150px !important;
 }
 .main-title{
-    position: absolute; 
+    position: absolute;
     z-index: 999;
     display: block;
     left: 0;
@@ -89,29 +94,32 @@ input::placeholder{
     bottom: 0;
     margin: auto;
     width: 800px;
-    height: 400px;
+    height: 300px;
     text-align: center;
 }
 .main-title .subtitle-hi{
-    font-size: 3em;
-    letter-spacing: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+    color: #3E3E3E;
     margin: 0;
+    letter-spacing: 0.22em;
 }
 .main-title .subtitle{
-    font-size: 1.5em;
-    letter-spacing: 5px;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'DM Sans', sans-serif;
+    color: #3E3E3E;
     margin: 0;
+    letter-spacing: 0.22em;
 }
-.main-title h2{
-    font-size: 6rem;
-    text-shadow: 2px 2px #f26400;
-    text-transform: uppercase;
-    margin: 0;
-}
+
+
 .home-links{
+    color: #18272F;
     position: absolute;
     width: 100%;
-    bottom: 40px;
+    bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,6 +169,57 @@ input::placeholder{
    }
 }
 
+/* REMITTANCE INQUIRY */
+
+    .main-remittance{
+        position: absolute;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    .remittance-logo{
+        height: auto;
+        width: auto;
+        margin-top: 20px;
+    }
+    .remittance-subtitle{
+        font-family: 'Rubik', 'sans-serif';
+        font-weight: 400;
+        color: #3E3E3E ;
+    }
+
+    .remittance-subtitle-know{
+        font-size: 20px;
+    }
+
+    .remittance-subtitle p{
+        font-size: 18px;
+        margin: 0 100px 0;
+    }
+
+    .remittance-inquiry-form{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .remittance-ref {
+        height: 100px;
+        width: 100%;
+    }
+
+
 
 /* LOGIN */
 
@@ -187,7 +246,7 @@ input::placeholder{
 .login-page .show-pass{
     width: 65px;
     background-color:#f26400;
-    
+
 }
 .login-page .allcash-logo{
   width: auto;
@@ -293,7 +352,7 @@ input::placeholder{
     border-right-style: solid;
     border-image: linear-gradient(45deg, #fb9b32 , #fb9b32);
     border-image-slice: 1;
-    transition: .4s ease-out; 
+    transition: .4s ease-out;
     background: #fff;
   }
   #content-wrapper{
@@ -416,10 +475,10 @@ input::placeholder{
     transition: .4s ease-out;
     /* width: 85px; height: 85px; background: #424242; border-radius: 50%;
     transition: .4s ease-out;  */
-  } 
+  }
   .toggled .hero-img-holder img{
     width: 65px !important; height: 65px !important;
-    
+
   }
   /* .hero-toogled-size{
     width: 65px !important; height: 65px !important;
@@ -520,7 +579,7 @@ input::placeholder{
     font-weight: 500;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
-  
+
   .btn-tab{
     color: #fff;
     transition: .3s ease-out;
@@ -647,7 +706,7 @@ input::placeholder{
     padding: 6px 15px;
     width: 100%;
     transition: .3s ease-out;
-    
+
   }
   .btn-export:hover{
     background-color: #000000;
@@ -922,7 +981,7 @@ border-color: #f26400;
 }
 .page-item .page-link{
   color: #f26400;
-} 
+}
 .rounded-s-button{
   background: #F9951E;
   padding: 0px 5px;
@@ -1072,8 +1131,8 @@ padding-left: 15px;
 .custom-field-items .row{
   border-bottom: 1px solid #7F7F7F66;
   margin: 10px 5px !important;
-  transition: .4s ease-out; 
-  
+  transition: .4s ease-out;
+
 }
 .custom-field-items .row:hover{
   background-color: #f8f9fa;
@@ -1111,7 +1170,7 @@ padding-left: 15px;
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
   background-color: #EE3E2C;
   color: #fff;
-  
+
 }
 .vr{
   display: inline-block;

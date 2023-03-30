@@ -8,6 +8,7 @@ const Login = () => import("@/components/Guest/Login.vue");
 const Register = () => import("@/components/Guest/Register.vue");
 const NotFound = () => import("@/components/Guest/NotFound.vue");
 const ResetPassword = () => import("@/components/Guest/ResetPassword.vue");
+const RemittanceInquiry = () => import("@/components/Guest/RemittanceInquiry.vue");
 /* Guest Component */
 
 /* Layouts */
@@ -93,6 +94,14 @@ const routes = [
                 component: ResetPassword,
                 meta: {
                     title: `Reset Password`,
+                },
+            },
+            {
+                name: "RemittanceInquiry",
+                path: "/remittance-inquiry",
+                component: RemittanceInquiry,
+                meta: {
+                    title: `Remittance Inquiry`,
                 },
             },
         ],
