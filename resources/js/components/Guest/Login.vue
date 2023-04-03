@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid h-100 login-page">
         <div class="row h-100 align-items-center bg-white">
-            <div class="col-md-6 px-md-4 px-sm-2 z-99">
+            <div class="col-md-6 px-md-4 px-sm-2 z-99 l-side">
                 <router-link to="/">
                     <img class="img-fluid sophia-login-logo" src="/images/sophia-login-logo.png" alt="AllCash Logo" />
                 </router-link>
@@ -22,13 +22,13 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <input type="checkbox" class="form-check-input rounded-0" id="exampleCheck1" />
                                 <label class="form-check-label text-blue" for="exampleCheck1">Remember Me</label>
                             </div>
                         </div>
                         <div class="col-sm-6 text-end">
                             <div class="mb-3">
-                                <router-link class="text-blue" to="/">Forgot Password?</router-link>
+                                <router-link class="text-blue" to="/forgot-password">Forgot Password?</router-link>
                             </div>
                         </div>
                     </div>

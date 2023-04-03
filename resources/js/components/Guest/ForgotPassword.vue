@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid h-100 login-page">
         <div class="row h-100 align-items-center bg-white">
-            <div class="col-md-6 px-md-4 px-sm-2 z-99">
+            <div class="col-md-6 px-md-4 px-sm-2 z-99 l-side">
                 <router-link to="/">
                     <img class="img-fluid sophia-forgot-password-logo" src="/images/sophia-forgot-password-logo.png" alt="Sophia Forgot Password Logo" />
                 </router-link>

@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid h-100 login-page">
         <div class="row h-100 align-items-center bg-white">
-            <div class="col-md-6 px-md-4 px-sm-2 z-99 partner-code-form">
+            <div class="col-md-6 px-md-4 px-sm-2 z-99 partner-code-form l-side">
                 <router-link to="/">
                     <img class="img-fluid sophia-partner-code-logo" src="/images/sophia-partner-code-logo.png" alt="Sophia Partner Code Logo" />
                 </router-link>

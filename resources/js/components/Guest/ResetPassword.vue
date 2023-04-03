@@ -1,9 +1,9 @@
 <template>
     <div class="container-fluid h-100 login-page">
         <div class="row h-100 align-items-center bg-white">
-            <div class="col-md-6 px-md-4 px-sm-2 z-99">
+            <div class="col-md-6 px-md-4 px-sm-2 z-99 l-side">
                 <router-link to="/">
-                    <img class="img-fluid sophia-login-logo" src="/images/sophia-reset-password-logo.png" alt="AllCash Logo" />
+                    <img class="img-fluid sophia-reset-password-logo" src="/images/sophia-reset-password-logo.png" alt="AllCash Logo" />
                 </router-link>
                 <form action="javascript:void(0)" method="post">
                     <!-- <div class="col-12" v-if="Object.keys(validationErrors).length > 0">
@@ -18,14 +18,14 @@
                     <div class="container height-100 d-flex justify-content-center align-items-center">
                         <div class="position-relative">
                             <div class="p-2 text-center">
-                                <h6 class="">Enter below the Reference Code that we sent to your email.</h6>
+                                <p class="text-secondary ref-code-note">Enter below the Reference Code that we sent to your email.</p>
                                 <div class="otp-inputs d-flex flex-row justify-content-center mt-2">
-                                    <input class="m-2 text-center form-control rounded-0" type="text" maxlength="1" /> 
-                                    <input class="m-2 text-center form-control rounded-0" type="text" maxlength="1" /> 
-                                    <input class="m-2 text-center form-control rounded-0" type="text" maxlength="1" /> 
-                                    <input class="m-2 text-center form-control rounded-0" type="text" maxlength="1" />
-                                    <input class="m-2 text-center form-control rounded-0" type="text" maxlength="1" /> 
-                                    <input class="m-2 text-center form-control rounded-0" type="text" maxlength="1" /> 
+                                    <input class="form-control mx-2 text-center rounded-0" type="text" maxlength="1" /> 
+                                    <input class="form-control mx-2 text-center rounded-0" type="text" maxlength="1" /> 
+                                    <input class="form-control mx-2 text-center rounded-0" type="text" maxlength="1" /> 
+                                    <input class="form-control mx-2 text-center rounded-0" type="text" maxlength="1" />
+                                    <input class="form-control mx-2 text-center rounded-0" type="text" maxlength="1" /> 
+                                    <input class="form-control mx-2 text-center rounded-0" type="text" maxlength="1" /> 
                                 </div>
                             </div>
                         </div>
@@ -35,12 +35,36 @@
                     <GroupButtonRight v-model="auth.password" type="password" label="CONFIRM PASSWORD" icon="bi bi-eye"
                         name="password" autocomplete="empasswordail" placeholder="RE-ENTER YOUR NEW PASSWORD"></GroupButtonRight>
 
-                    <!-- PASSWORD CRITERIA 
-                        <div class="row">
-
-                    </div>  -->
-                    <button :disabled="processing" @click="login" class="btn btn-lg btn-login draw-border" type="button">
-                        {{ processing ? "Please wait" : "LOGIN" }}
+                    <!-- PASSWORD CRITERIA  -->
+                    <div class="pw-requirement">
+                        <div class="pw-note">
+                            <p class="text-secondary">Password must meet the following requirements:</p>
+                        </div>
+                        <div class="pw-criteria d-flex justify-content-between align-items-center">
+                            <div class="criteria">
+                                <h5 class="font-weight-bold">8-15</h5>
+                                <p>Character</p>
+                            </div>
+                            <div class="criteria">
+                                <h5 class="font-weight-bold">AA</h5>
+                                <p>Uppercase</p>
+                            </div>
+                            <div class="criteria">
+                                <h5 class="font-weight-bold">aa</h5>
+                                <p>Lowercase</p>
+                            </div>
+                            <div class="criteria">
+                                <h5 class="font-weight-bold">123</h5>
+                                <p>Number</p>
+                            </div>
+                            <div class="criteria">
+                                <h5 class="font-weight-bold">@$#</h5>
+                                <p>Symbol</p>
+                            </div>
+                        </div>
+                    </div> 
+                    <button :disabled="processing" @click="proceed" class="btn btn-lg btn-login draw-border" type="button">
+                        {{ processing ? "Please wait" : "PROCEED" }}
                     </button>
                 </form>
                 <div class="text-center">
@@ -50,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 r-side h-100">
+            <div class="col-md-6 r-side vh-100">
                 <Particles id="tsparticles" :particlesInit="particlesInit" :particlesLoaded="particlesLoaded" :options="{
                     particles: {
                         number: {

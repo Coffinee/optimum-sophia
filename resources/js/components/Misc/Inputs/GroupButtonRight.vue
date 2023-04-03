@@ -10,7 +10,7 @@
             @input="updateValue"
             :placeholder="placeholder"
             :autocomplete="autocomplete"
-            class="form-control shadow-none border-left-none rounded-0">
+            class="form-control shadow-none border-right-none rounded-0 input-left">
             <span class="input-group-text rounded-0 fs-4" :id="name"><i :class="icon"></i></span>
         </div>
     </div>

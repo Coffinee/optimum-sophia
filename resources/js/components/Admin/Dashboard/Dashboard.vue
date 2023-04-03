@@ -9,13 +9,13 @@
             <h6 class="m-0 font-weight-bold text-right text-white">DASHBOARD</h6>
         </div>
         <div class="card-body">
-        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum vel voluptates debitis ipsum nisi. Consectetur dolor tempora voluptas, cumque perspiciatis voluptate labore distinctio minus rerum ab autem. Placeat, tenetur esse?    </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum vel voluptates debitis ipsum nisi. Consectetur dolor tempora voluptas, cumque perspiciatis voluptate labore distinctio minus rerum ab autem. Placeat, tenetur esse?    </p>
             <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum vel voluptates debitis ipsum nisi. Consectetur dolor tempora voluptas, cumque perspiciatis voluptate labore distinctio minus rerum ab autem. Placeat, tenetur esse?</p>
             <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum vel voluptates debitis ipsum nisi. Consectetur dolor tempora voluptas, cumque perspiciatis voluptate labore distinctio minus rerum ab autem. Placeat, tenetur esse?</p>
             <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum vel voluptates debitis ipsum nisi. Consectetur dolor tempora voluptas, cumque perspiciatis voluptate labore distinctio minus rerum ab autem. Placeat, tenetur esse?</p>
             <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum vel voluptates debitis ipsum nisi. Consectetur dolor tempora voluptas, cumque perspiciatis voluptate labore distinctio minus rerum ab autem. Placeat, tenetur esse?</p>
             <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum vel voluptates debitis ipsum nisi. Consectetur dolor tempora voluptas, cumque perspiciatis voluptate labore distinctio minus rerum ab autem. Placeat, tenetur esse?</p>
-            <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum vel voluptates debitis ipsum nisi. Consectetur dolor tempora voluptas, cumque perspiciatis voluptate labore distinctio minus rerum ab autem. Placeat, tenetur esse?</p> -->
+            <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum vel voluptates debitis ipsum nisi. Consectetur dolor tempora voluptas, cumque perspiciatis voluptate labore distinctio minus rerum ab autem. Placeat, tenetur esse?</p>
         </div>
     </div>
 </div>
